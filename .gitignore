@@ -1,2 +1,18 @@
-# Node.js dependencies
-node_modules/
+To remove the `node_modules` directory from your repository after it has been pushed, follow these steps:
+
+1. Remove the `node_modules` directory from the repository's tracking:
+    ```bash
+    git rm -r --cached node_modules
+    ```
+
+2. Commit the changes:
+    ```bash
+    git commit -m "Remove node_modules from repository"
+    ```
+
+3. Push the changes to the remote repository:
+    ```bash
+    git push
+    ```
+
+4. Ensure your `.gitignore` file includes `node_modules/` to prevent it from being tracked again.
